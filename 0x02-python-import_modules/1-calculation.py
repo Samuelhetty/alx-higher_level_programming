@@ -10,5 +10,6 @@ def main():
     for aa in log:
         print('{:d} {:} {:d} = {:d}'.format(a, syb[aa], b, log[aa](a, b)))
 
+
 if __name__ == "__main__":
     main()
