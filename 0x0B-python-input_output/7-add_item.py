@@ -11,7 +11,7 @@ def app():
     """adds input args to file"""
     try:
         a_list = load_from_json_file('./add_item.json')
-    except:
+    except FileNotFoundError:
         a_list = []
     for i in range(1, len(argv)):
         a_list.append(argv[i])
