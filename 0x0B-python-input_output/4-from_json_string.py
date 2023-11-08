@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""loads (decodes/ converts) string to JSON"""
+
+
 import json
 
 

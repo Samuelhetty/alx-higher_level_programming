@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""writes string to file"""
+
+
 def write_file(filename="", text=""):
     """writes string to file"""
     chars_written = 0

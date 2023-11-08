@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""appends new string after every line containing substring"""
+
+
 def append_after(filename="", search_string="", new_string=""):
     """appends new string after every line containing substring"""
     with open(filename, mode='r', encoding='utf-8') as f_io:

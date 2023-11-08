@@ -1,8 +1,14 @@
+#!/usr/bin/python3
+"""returns a list of lists of integers"""
+
+
 def pascal_triangle(n):
+    """returns an empty list"""
     if n <= 0:
         return []
 
     def generate_row(prev_row):
+        """returns a triangle"""
         if not prev_row:
             return [1]
         new_row = [1]

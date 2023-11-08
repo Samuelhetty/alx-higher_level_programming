@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Student class with name and age"""
+
+
 class Student():
     """Student class with name and age"""
     def __init__(self, first_name, last_name, age):
