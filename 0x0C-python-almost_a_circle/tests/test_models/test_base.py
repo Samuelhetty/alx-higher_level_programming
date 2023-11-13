@@ -159,7 +159,7 @@ were given"
 
     # ----------------- Tests #17 ------------------------
     def test_Test_from_json_string(self):
-    """Tests to_json_string() signature:"""
+        """Tests to_json_string() signature:"""
         with self.assertRaises(TypeError) as e:
             Base.from_json_string()
         s = "from_json_string() missing 1 required positional argument: \

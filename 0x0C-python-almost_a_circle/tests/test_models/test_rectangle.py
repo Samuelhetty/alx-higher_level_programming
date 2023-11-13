@@ -138,7 +138,7 @@ given"
         self.assertEqual(r.id, 99)
 
     def test_properties(self):
-    """Tests property getters/setters"""
+        """Tests property getters/setters"""
         r = Rectangle(5, 9)
         r.width = 100
         r.height = 101
