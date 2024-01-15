@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 """
-7-model_state_fetch_all.py
+8-model_state_fetch_first.py
 """
 import sys
 from model_state import Base, State
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, func
 from sqlalchemy.orm import sessionmaker
 
 
 def init_sess():
-    """initializes session and engine for sqlalchemy DB instance"""
+    """initializes session instance of DB using sqlalchemy"""
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
@@ -17,14 +17,17 @@ def init_sess():
     return (engine, session)
 
 
-def print_states(db):
-    """prints all the states from session DB"""
+def print_min_state(db):
+    """prints the state with min value using first()"""
     session = db[1]
-    for instance in session.query(State).order_by(State.id):
+    instance = session.query(State).first()
+    try:
         print(instance.id, ': ', instance.name, sep='')
+    except:
+        print("Nothing")
     session.close()
     db[0].dispose()
 
 
 if __name__ == '__main__':
-    print_states(init_sess())
+    print_min_state(init_sess())
