@@ -23,7 +23,7 @@ def print_min_state(db):
     instance = session.query(State).first()
     try:
         print(instance.id, ': ', instance.name, sep='')
-    except:
+    except NameError:
         print("Nothing")
     session.close()
     db[0].dispose()

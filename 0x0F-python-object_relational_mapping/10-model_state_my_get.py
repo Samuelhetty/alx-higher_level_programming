@@ -32,7 +32,7 @@ def print_state_name(db):
     r = session.query(State).filter(State.name == n)
     try:
         print(r[0].id)
-    except:
+    except NameError:
         print("Not found")
     session.close()
     db[0].dispose()
