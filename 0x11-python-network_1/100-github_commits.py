@@ -17,6 +17,7 @@ def request_to_github(the_url):
         c_author = c.get('commit').get('author').get('name')
         print('{}: {}'.format(c_sha, c_author))
 
+
 if __name__ == "__main__":
     """MAIN APP"""
     the_url = ('https://api.github.com/repos/{}/{}/commits'
